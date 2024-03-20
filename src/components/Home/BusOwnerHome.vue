@@ -2,9 +2,6 @@
 import { ref } from 'vue'
 
 const breadcrumb = ref('Bus');
-const display_section1 = ref(true);
-const display_section2 = ref(false);
-const display_section3 = ref(false);
 const backgroundColor_1 = ref('#be65eb');
 const backgroundColor_2 = ref('');
 const backgroundColor_3 = ref('');
@@ -12,25 +9,16 @@ const backgroundColor_3 = ref('');
 const changeBreadCrumb = (value) => {
   if ("Bus" == value) {
     breadcrumb.value = "Bus";
-    display_section1.value = true;
-    display_section2.value = false;
-    display_section3.value = false;
     backgroundColor_1.value = '#be65eb';
     backgroundColor_2.value = ''
     backgroundColor_3.value = ''
   } else if ("Routes" == value) {
     breadcrumb.value = "Routes"
-    display_section1.value = false;
-    display_section2.value = true;
-    display_section3.value = false;
     backgroundColor_1.value = '';
     backgroundColor_2.value = '#be65eb'
     backgroundColor_3.value = ''
   } else {
     breadcrumb.value = "Sub Routes"
-    display_section1.value = false;
-    display_section2.value = false;
-    display_section3.value = true;
     backgroundColor_1.value = '';
     backgroundColor_2.value = ''
     backgroundColor_3.value = '#be65eb'
@@ -62,7 +50,7 @@ const changeBreadCrumb = (value) => {
       <div class="line"></div>
       <div class="right-section-table">
 
-        <div v-if="display_section1" class="bus-owner-section">
+        <div class="bus-owner-section">
           <div class="create-btn-container">
             <button class="create-btn" data-toggle="modal" data-target="#exampleCreateModel">+</button>
           </div>
@@ -89,64 +77,6 @@ const changeBreadCrumb = (value) => {
             </tbody>
           </table>
         </div>
-
-        <div v-if="display_section2" class="bus-owner-section">
-          <div class="create-btn-container">
-            <button class="create-btn" data-toggle="modal" data-target="#exampleCreateModel">+</button>
-          </div>
-          <table class="table table-hover table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Name2</th>
-                <th scope="col">Email</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody class="bus-owner-table-body">
-              <tr>
-                <td>Arjun Shaji</td>
-                <td>arjun@gmail.com</td>
-                <td><button type="button" class="btn btn-info edit-btn" data-toggle="modal" data-target="#exampleModal">
-                    Edit
-                  </button></td>
-                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
-                    Delete
-                  </button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div v-if="display_section3" class="bus-owner-section">
-          <div class="create-btn-container">
-            <button class="create-btn" data-toggle="modal" data-target="#exampleCreateModel">+</button>
-          </div>
-          <table class="table table-hover table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Name3</th>
-                <th scope="col">Email</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody class="bus-owner-table-body">
-              <tr>
-                <td>Arjun Shaji</td>
-                <td>arjun@gmail.com</td>
-                <td><button type="button" class="btn btn-info edit-btn" data-toggle="modal" data-target="#exampleModal">
-                    Edit
-                  </button></td>
-                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
-                    Delete
-                  </button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-
 
       </div>
     </div>
