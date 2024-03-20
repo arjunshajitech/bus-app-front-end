@@ -46,7 +46,7 @@ const changeBreadCrumb = (value) => {
 
                 <div v-if="display_section" class="bus-owner-section">
                     <div class="create-btn-container">
-                        <button class="create-btn">+</button>
+                        <button class="create-btn" data-toggle="modal" data-target="#exampleCreateModel">+</button>
                     </div>
                     <table class="table table-hover table-dark">
                         <thead>
@@ -158,6 +158,35 @@ const changeBreadCrumb = (value) => {
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleCreateModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create XXXXXX</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Name:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Email:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Create</button>
             </div>
           </div>
         </div>
@@ -274,7 +303,7 @@ button:focus {
     outline: none;
 }
 
-#exampleModalCenter , #exampleModal {
+#exampleModalCenter , #exampleModal ,#exampleCreateModel {
     color: #111;
 }
 </style>
