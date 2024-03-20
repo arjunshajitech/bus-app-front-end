@@ -79,6 +79,7 @@ div {
     font-size: 17px;
     cursor: pointer;
     outline: none;
+    color: #fff;
 }
 
 .login-button:hover {

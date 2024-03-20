@@ -1,14 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 
-const breadcrumb = ref('XXXXXX');
+const breadcrumb = ref('Bus Owners');
 const display_section = ref(true);
 const backgroundColor_1 = ref('#3b9eee');
 const backgroundColor_2 = ref('');
 
 const changeBreadCrumb = (value) => {
-    if ("XXXXXX" == value) {
-        breadcrumb.value = "XXXXXX";
+    if ("Bus Owners" == value) {
+        breadcrumb.value = "Bus Owners";
         display_section.value = true;
         backgroundColor_1.value = '#3b9eee';
         backgroundColor_2.value = ''
@@ -32,14 +32,14 @@ const changeBreadCrumb = (value) => {
                 XXXXXX
             </div>
             <div class="menu-items">
-                <p class="items" :style="{backgroundColor : backgroundColor_1}" @click="changeBreadCrumb('XXXXXX')">XXXXXX</p>
+                <p class="items" :style="{backgroundColor : backgroundColor_1}" @click="changeBreadCrumb('Bus Owners')">Bus Owners</p>
                 <p class="items" :style="{backgroundColor : backgroundColor_2}" @click="changeBreadCrumb('Users')">Users</p>
             </div>
         </div>
         <div class="right-section-container">
             <div class="right-header-text">
                 <p class="left-item">Admin Panel / {{ breadcrumb }}</p>
-                <p class="right-item">Welcome XXXXXX</p>
+                <p class="right-item">Welcome Arjun Shaji</p>
             </div>
             <div class="line"></div>
             <div class="right-section-table">
@@ -61,7 +61,7 @@ const changeBreadCrumb = (value) => {
                             <tr>
                                 <td>Arjun Shaji</td>
                                 <td>arjun@gmail.com</td>
-                                <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                                <td><button type="button" class="btn btn-info edit-btn" data-toggle="modal" data-target="#exampleModal">
                                         Edit
                                     </button></td>
                                 <td><button type="button" class="btn btn-danger" data-toggle="modal"
@@ -70,16 +70,16 @@ const changeBreadCrumb = (value) => {
                                     </button></td>
                             </tr>
                             <tr>
-                                <td>Arjun Shaji</td>
-                                <td>arjun@gmail.com</td>
-                                <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-                                        Edit
-                                    </button></td>
-                                <td><button type="button" class="btn btn-danger" data-toggle="modal"
-                                        data-target="#exampleModalCenter">
-                                        Delete
-                                    </button></td>
-                            </tr>
+                              <td>Arjun Shaji</td>
+                              <td>arjun@gmail.com</td>
+                              <td><button type="button" class="btn btn-info edit-btn" data-toggle="modal" data-target="#exampleModal">
+                                      Edit
+                                  </button></td>
+                              <td><button type="button" class="btn btn-danger" data-toggle="modal"
+                                      data-target="#exampleModalCenter">
+                                      Delete
+                                  </button></td>
+                          </tr>
                         </tbody>
                     </table>
                 </div>
@@ -157,7 +157,7 @@ const changeBreadCrumb = (value) => {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-primary edit-btn">Save</button>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ const changeBreadCrumb = (value) => {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Create</button>
+              <button type="button" class="btn btn-primary edit-btn">Create</button>
             </div>
           </div>
         </div>
@@ -305,5 +305,10 @@ button:focus {
 
 #exampleModalCenter , #exampleModal ,#exampleCreateModel {
     color: #111;
+}
+
+.edit-btn {
+  background-color: #70b6ef;
+  border-color: #70b6ef;
 }
 </style>
