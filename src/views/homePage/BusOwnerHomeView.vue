@@ -1,24 +1,17 @@
 <script setup>
 import NavBar from '../../components/NavBarLatest.vue'
-import Navs from '../../components/Navs.vue'
+import Navs from '../../components/navs/BusOwnerNav.vue'
 
 
 const bgColor = "#be65eb";
 const panel = "Bus Owner Panel";
-const navs =  {
-    color : bgColor,
-    names : [
-        "Buses",
-        "Routes",
-        "Sub Routes"
-    ]
-}
+const role = "BUS_OWNER"
 </script>
 
 
 <template>
     <main>
-        <NavBar :navbarBgColor="bgColor" :panel="panel"/>
-        <Navs :navDetails="navs"/>
+        <NavBar :navbarBgColor="bgColor" :panel="panel"  :role="role"/>
+        <Navs/>
     </main>
 </template>

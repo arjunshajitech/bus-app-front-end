@@ -1,8 +1,19 @@
 <script setup>
 import { defineProps } from 'vue'
+import { useRouter } from 'vue-router'
 const props = defineProps(['loginFormDetails','role']);
 const LoginDetails = props.loginFormDetails;
-console.log(props.role);
+const route = useRouter();
+
+const login = () => {
+  if (props.role == 'ADMIN') {
+    route.push('/admin/home')
+  } else if (props.role = 'BUS_OWNER') {
+    route.push('/bus-owner/home')
+  } else {
+    alert(props.role)
+  }
+}
 
 </script>
 
@@ -23,7 +34,7 @@ console.log(props.role);
                     type="password">
             </div>
             <div class="login-form">
-                <button class="login-button" :style="{ backgroundColor: LoginDetails.backgroundColor }">Login</button>
+                <button @click="login()" class="login-button" :style="{ backgroundColor: LoginDetails.backgroundColor }">Login</button>
             </div>
         </div>
     </div>

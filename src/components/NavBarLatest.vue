@@ -1,6 +1,18 @@
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['navbarBgColor', 'panel'])
+import { useRouter } from 'vue-router'
+const props = defineProps(['navbarBgColor', 'panel', 'role']);
+const route = useRouter();
+
+const logout = () => {
+  if (props.role == 'ADMIN') {
+    route.push('/admin')
+  } else if (props.role = 'BUS_OWNER') {
+    route.push('/bus-owner')
+  } else {
+    alert(props.role)
+  }
+}
 
 </script>
 
@@ -9,7 +21,7 @@ const props = defineProps(['navbarBgColor', 'panel'])
     <i class="uil uil-bars navOpenBtn"></i>
     <a href="#" class="logo">XXXXXX</a>
     <a href="#" class="logo">{{ props.panel }} | Welcome Arjun Shaji</a>
-    <a href="#" class="logo">Logout</a>
+    <a href="#" class="logo" @click="logout()">Logout</a>
   </nav>
 </template>
 
