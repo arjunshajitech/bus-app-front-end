@@ -21,10 +21,15 @@
 // navCloseBtn.addEventListener("click", () => {
 //   nav.classList.remove("openNav");
 // });
+
+
+import { defineProps } from 'vue'
+const props = defineProps(['navbarBgColor'])
+
 </script>
 
 <template>
-  <nav class="nav">
+  <nav class="nav" :style="{ backgroundColor: props.navbarBgColor }">
     <i class="uil uil-bars navOpenBtn"></i>
     <a href="#" class="logo">XXXXXX</a>
   </nav>

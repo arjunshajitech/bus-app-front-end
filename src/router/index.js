@@ -1,12 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import UserLoginView from '../views/UserLoginView.vue'
-import AdminLoginView from '@/views/AdminLoginView.vue'
-import BusOwnerLoginView from '@/views/BusOwnerLoginView.vue'
-import AdminHome from '@/components/Home/AdminHome.vue'
 
-import BusOwnerHomeView from '@/views/BusOwnerHomeView.vue'
-import UserHomeView from '@/views/UserHomeView.vue'
-
+import AdminLoginView from '@/views/login/AdminLoginView.vue'
+import UserLoginView from '@/views/login/UserLoginView.vue'
+import BusOwnerLoginView from '@/views/login/BusOwnerLoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,22 +21,23 @@ const router = createRouter({
       path: '/bus-owner',
       name: 'busOwnerLogin',
       component: BusOwnerLoginView
-    },
-    {
-      path: '/admin/home',
-      name: 'adminHome',
-      component: AdminHome
-    },
-    {
-      path: '/bus-owner/home',
-      name: 'busOwnerHome',
-      component: BusOwnerHomeView
-    },
-    {
-      path: '/home',
-      name: 'userHome',
-      component: UserHomeView
     }
+    // },
+    // {
+    //   path: '/admin/home',
+    //   name: 'adminHome',
+    //   component: AdminHome
+    // },
+    // {
+    //   path: '/bus-owner/home',
+    //   name: 'busOwnerHome',
+    //   component: BusOwnerHomeView
+    // },
+    // {
+    //   path: '/home',
+    //   name: 'userHome',
+    //   component: UserHomeView
+    // }
   ]
 })
 

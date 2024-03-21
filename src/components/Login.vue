@@ -1,5 +1,7 @@
 <script setup>
-
+import { defineProps } from 'vue'
+const props = defineProps(['loginFormDetails']);
+const LoginDetails = props.loginFormDetails;
 
 </script>
 
@@ -7,19 +9,20 @@
 <template>
     <div class="login-container">
         <div class="login-header-container">
-            <p class="login-header-text">Bus Owner Login</p>
+            <p class="login-header-text">{{ LoginDetails.heading }}</p>
         </div>
         <div class="login-form-container">
             <div class="login-form">
-                <p class="input-text">Email</p>
-                <input class="login-input" type="text">
+                <p class="input-text">{{ LoginDetails.input_1 }}</p>
+                <input :style="{ borderColor: LoginDetails.backgroundColor }" class="login-input" type="text">
             </div>
             <div class="login-form">
-                <p class="input-text">Password</p>
-                <input class="login-input" id="passwordField" type="password">
+                <p class="input-text">{{ LoginDetails.input_2 }}</p>
+                <input :style="{ borderColor: LoginDetails.backgroundColor }" class="login-input" id="passwordField"
+                    type="password">
             </div>
             <div class="login-form">
-                <button class="login-button">Login</button>
+                <button class="login-button" :style="{ backgroundColor: LoginDetails.backgroundColor }">Login</button>
             </div>
         </div>
     </div>
@@ -43,7 +46,7 @@ div {
 .login-header-container {
     text-align: center;
     width: 100%;
-    margin-top: 150px;
+    margin-top: 180px;
 }
 
 .login-header-text {
@@ -61,9 +64,9 @@ div {
 
 .login-input {
     width: 350px;
-    height: 40px;
+    height: 45px;
     outline: none;
-    border: 2px solid#c984eb;
+    border: 2px solid;
     border-radius: 4px;
     padding-left: 20px;
     font-size: 16px;
@@ -75,15 +78,10 @@ div {
     height: 40px;
     border: none;
     border-radius: 4px;
-    background-color: #be65eb;
     font-size: 17px;
     cursor: pointer;
     outline: none;
     color: #fff;
-}
-
-.login-button:hover {
-    background-color: #c984eb;
 }
 
 .login-form {
