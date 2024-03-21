@@ -1,7 +1,8 @@
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['loginFormDetails']);
+const props = defineProps(['loginFormDetails','role']);
 const LoginDetails = props.loginFormDetails;
+console.log(props.role);
 
 </script>
 

@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar.vue'
 
 
 const bgColor = "#efb043";
+const role = "USER"
 const loginFormDetails = {
     heading: "User Login",
     input_1: "Email or Phone Nunber",
@@ -16,6 +17,6 @@ const loginFormDetails = {
 <template>
     <main>
         <NavBar :navbarBgColor="bgColor" />
-        <Login :loginFormDetails="loginFormDetails" />
+        <Login :loginFormDetails="loginFormDetails" :role="role"/>
     </main>
 </template>

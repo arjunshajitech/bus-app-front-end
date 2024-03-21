@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps(['navbarBgColor'])
+const props = defineProps(['navbarBgColor', 'panel'])
 
 </script>
 
@@ -8,6 +8,8 @@ const props = defineProps(['navbarBgColor'])
   <nav class="nav" :style="{ backgroundColor: props.navbarBgColor }">
     <i class="uil uil-bars navOpenBtn"></i>
     <a href="#" class="logo">XXXXXX</a>
+    <a href="#" class="logo">{{ props.panel }} | Welcome Arjun Shaji</a>
+    <a href="#" class="logo">Logout</a>
   </nav>
 </template>
 
@@ -114,6 +116,4 @@ a {
 .nav .navCloseBtn {
   display: none;
 }
-
-
 </style>
