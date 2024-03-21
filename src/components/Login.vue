@@ -8,10 +8,10 @@ const route = useRouter();
 const login = () => {
   if (props.role == 'ADMIN') {
     route.push('/admin/home')
-  } else if (props.role = 'BUS_OWNER') {
+  } else if (props.role == 'BUS_OWNER') {
     route.push('/bus-owner/home')
   } else {
-    alert(props.role)
+    route.push('/home')
   }
 }
 

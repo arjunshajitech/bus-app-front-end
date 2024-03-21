@@ -5,6 +5,7 @@ import UserLoginView from '@/views/login/UserLoginView.vue'
 import BusOwnerLoginView from '@/views/login/BusOwnerLoginView.vue'
 import AdminHome from '@/views/homePage/AdminHomeView.vue'
 import BusOwnerHome from '@/views/homePage/BusOwnerHomeView.vue'
+import UserHome from '@/views/homePage/UserHomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,32 +29,17 @@ const router = createRouter({
       path: '/admin/home',
       name: 'adminHome',
       component: AdminHome
-    }
-    ,
+    },
     {
       path: '/bus-owner/home',
       name: 'busOwnerHome',
       component: BusOwnerHome
+    },
+    {
+      path: '/home',
+      name: 'userHome',
+      component: UserHome
     }
-
-
-
-    // },
-    // {
-    //   path: '/admin/home',
-    //   name: 'adminHome',
-    //   component: AdminHome
-    // },
-    // {
-    //   path: '/bus-owner/home',
-    //   name: 'busOwnerHome',
-    //   component: BusOwnerHomeView
-    // },
-    // {
-    //   path: '/home',
-    //   name: 'userHome',
-    //   component: UserHomeView
-    // }
   ]
 })
 

@@ -7,10 +7,10 @@ const route = useRouter();
 const logout = () => {
   if (props.role == 'ADMIN') {
     route.push('/admin')
-  } else if (props.role = 'BUS_OWNER') {
+  } else if (props.role == 'BUS_OWNER') {
     route.push('/bus-owner')
   } else {
-    alert(props.role)
+    route.push('/')
   }
 }
 
